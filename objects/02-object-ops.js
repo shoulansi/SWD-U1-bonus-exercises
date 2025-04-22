@@ -85,6 +85,23 @@ for (let restaurant of restaurants) {
 /*
 	Create two objects representing different local attractions (zoo, gardens, museums, etc), each with the following properties: name, location, adultTicketPrice, childTicketPrice, and famousFeatures (array of three strings). Be creative! Place the objects in an array.
 */
+let stlZoo = {
+	name: "St.Louis Zoo",
+	location: "Tower Park",
+	adultTicketPrice: 10,
+	childTicketPrice: 6,
+	famousFeatures: ["Penguin Exhibit", "Polar Bear Exhibit", "Butterfly House"]
+};
+console.log(stlZoo);
+
+const gardens = {
+    name : "Botanical Gardens",
+    location : "Saint Louis",
+    adultTicketPrice : 15,
+    childTicketPrice : 13,
+    famousFeatures : ["themed gardens", "greenhouses", "arboretums"]
+}
+console.log(gardens);
 
 // TODO: create objects and put them in an array
 
@@ -95,7 +112,16 @@ for (let restaurant of restaurants) {
 */
 
 // TODO: use nested loops to print values inside objects
-
+for (let key in gardens){
+	if (Array.isArray(gardens[key])){
+		for (let i = 0; i < gardens[key].length; i++)
+			console.log(gardens[key][i]);
+	} else {
+		console.log(gardens[key]);
+	}
+	
+	
+};
 /*
 	Last task: loop through the outer array and print a single template literal for each attraction using placeholders referencing the object at each index. Here's an example:
 
@@ -106,4 +132,6 @@ for (let restaurant of restaurants) {
 */
 
 // TODO: Print a template literal
-
+for (zoo in stlZoo.famousFeatures){ 
+console.log(`St.Louis Zoo located in ${stlZoo.location} has famous attractions such as: ${stlZoo.famousFeatures[0]}, ${stlZoo.famousFeatures[1]}, and ${stlZoo.famousFeatures[2]}. Come swing by! Ticket sales starting at ${stlZoo.adultTicketPrice} for adults and ${stlZoo.childTicketPrice} for children.`)
+}

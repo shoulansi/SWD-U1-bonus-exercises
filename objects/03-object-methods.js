@@ -52,13 +52,15 @@ let num2 = 3;
 console.log(add.doTheMath(num1, num2));
 
 // TODO: Call the subtractTwo function by referencing the subtract object and print the result.
-
+console.log(subtract.doTheMath(num1, num2));
 
 // TODO: Call the anonymous multiplication method in the multiple object and print the result.
-
+console.log(multiply.doTheMath(num1, num2));
 
 // TODO: Reference the object and its property key and call all three methods with new numbers passed directly as arguments for the parameters a and b. Choose whatever numbers you want.
-
+console.log(add.doTheMath(5,8));
+console.log(subtract.doTheMath(10,7));
+console.log(multiply.doTheMath(55,3));
 
 
 /**** WRITING YOUR OWN METHODS ****/
@@ -70,35 +72,44 @@ console.log(add.doTheMath(num1, num2));
 */
 
 // TODO: write a function for the peanutMMs description
-
+function peanuts(a){
+	console.log(a);
+};
 
 let peanutMMs = {
 	name: "Peanut M&Ms",
 	type: "chocolate",
 	slogan: "Melts in your mouth, not in your hand",
+	describeCandy: peanuts
 	// TODO: add describeCandy property (method) referencing your external named function
 
 };
-
+peanutMMs.describeCandy("Peanut M&Ms are crunchy when you bite them.");
 // TODO: write a function for the skittles description
-
+let skittleTaste = function(a){
+	console.log(a);
+};
 
 let skittles = {
 	name: "Skittles",
 	type: "fruit-flavored",
 	slogan: "Taste the rainbow",
+	describeCandy: skittleTaste
 	// TODO: add describeCandy property (method) referencing your external function that is stored in a variable
 	
 };
-
+skittles.describeCandy("Way too sweet.");
 let werthers = {
 	name: "Werther's Original",
 	type: "caramel",
 	slogan: "A little piece of bliss",
+	describeCandy: function(a){
+		console.log(a);
+	}
 	// TODO: add describeCandy property (method) as an anonymous function here inside the object... and while you're at it, mention the name and type of the candy in your sentence by referencing those properties within the object! (Hint: remember that inside an object you use "this" instead of the object name to reference its own properties.)
 
 };
-
+werthers.describeCandy("Really creamy.");
 // TODO: Put all three objects in an array. Loop through to run the function for each object.
 
 
